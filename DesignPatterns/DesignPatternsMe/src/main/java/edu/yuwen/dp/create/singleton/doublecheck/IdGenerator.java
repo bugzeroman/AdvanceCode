@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * Demo:唯一递增ID号码生成器
  */
 public class IdGenerator {
+    // 用volatile修饰一下更好
     private static IdGenerator instance;
 
     private AtomicLong id = new AtomicLong(0);
