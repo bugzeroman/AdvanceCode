@@ -1,13 +1,13 @@
-package edu.yuwen.dp.create.singleton.factory.simple.v1;
+package edu.yuwen.dp.create.singleton.factory.simple.v2;
 
 import edu.yuwen.dp.create.singleton.factory.scene.IRuleConfigParser;
 import edu.yuwen.dp.create.singleton.factory.scene.InvalidRuleConfigException;
 import edu.yuwen.dp.create.singleton.factory.scene.RuleConfig;
 
 /**
- * 2.工厂模式 
+ * 2.工厂模式
  * 
- * 1.简单工厂模式
+ *  1.简单工厂模式
  * 
  * Demo:根据配置文件的后缀（json、xml、yaml、properties），
  * 选择不同的解析器（JsonRuleConfigParser、XmlRuleConfigParser……），

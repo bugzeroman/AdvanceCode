@@ -7,7 +7,9 @@ import edu.yuwen.dp.create.singleton.factory.scene.XmlRuleConfigParser;
 import edu.yuwen.dp.create.singleton.factory.scene.YamlRuleConfigParser;
 
 /**
- * 1.简单工厂模式
+ * 2.工厂模式 
+ * 
+ * 1.简单工厂模式 第一种写法，每次new一个对象返回，不缓存
  * 
  * Explain:将createParser()函数剥离到一个独立的类中，让这个类只负责对象的创建
  */
