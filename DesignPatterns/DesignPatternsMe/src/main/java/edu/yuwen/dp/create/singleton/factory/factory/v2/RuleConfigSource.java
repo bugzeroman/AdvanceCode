@@ -8,7 +8,7 @@ import edu.yuwen.dp.create.singleton.factory.scene.RuleConfig;
 /**
  * 2.工厂模式 
  * 
- * 1.工厂方法模式 第二种写法，使用简单工厂模式来创建工厂类，即工厂的工厂。
+ * 2.工厂方法模式 第二种写法，使用简单工厂模式来创建工厂类，即工厂的工厂。
  * 
  * 推荐第二种写法
  * 

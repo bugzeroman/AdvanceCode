@@ -12,7 +12,7 @@ import edu.yuwen.dp.create.singleton.factory.scene.RuleConfig;
 /**
  * 2.工厂模式 
  * 
- * 1.工厂方法模式 第一种，典型代码实现
+ * 2.工厂方法模式 第一种，典型代码实现
  * 
  * Demo:根据配置文件的后缀（json、xml、yaml、properties），
  * 选择不同的解析器（JsonRuleConfigParser、XmlRuleConfigParser……），
