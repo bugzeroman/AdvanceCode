@@ -1,4 +1,4 @@
-package edu.yuwen.dp.create.singleton.staticmethod;
+package edu.yuwen.dp.create.singleton.more.staticmethod;
 
 import java.util.concurrent.atomic.AtomicLong;
 
