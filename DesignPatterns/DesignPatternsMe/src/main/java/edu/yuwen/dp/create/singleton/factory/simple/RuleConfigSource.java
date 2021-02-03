@@ -8,10 +8,9 @@ package edu.yuwen.dp.create.singleton.factory.simple;
  * 将存储在文件中的配置解析成内存对象 RuleConfig。
  */
 public class RuleConfigSource {
-
     public RuleConfig load(String ruleConfigFilePath) {
         String ruleConfigFileExtension = getFileExtension(ruleConfigFilePath);
-        IRuleConfigParser parser = createParser(ruleConfigFileExtension);
+        IRuleConfigParser parser = RuleConfigParserFactory.createParser(ruleConfigFileExtension);
         if (parser == null) {
             throw new InvalidRuleConfigException("Rule config file format is not supported: " + ruleConfigFilePath);
         }
@@ -25,19 +24,5 @@ public class RuleConfigSource {
     private String getFileExtension(String filePath) {
         // 解析文件名获取扩展名，比如rule.json，返回json
         return "json";
-    }
-
-    private IRuleConfigParser createParser(String configFormat) {
-        IRuleConfigParser parser = null;
-        if ("json".equalsIgnoreCase(configFormat)) {
-            parser = new JsonRuleConfigParser();
-        } else if ("xml".equalsIgnoreCase(configFormat)) {
-            parser = new XmlRuleConfigParser();
-        } else if ("yaml".equalsIgnoreCase(configFormat)) {
-            parser = new YamlRuleConfigParser();
-        } else if ("properties".equalsIgnoreCase(configFormat)) {
-            parser = new PropertiesRuleConfigParser();
-        }
-        return parser;
     }
 }
