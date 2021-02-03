@@ -1,4 +1,8 @@
-package edu.yuwen.dp.create.singleton.factory.simple;
+package edu.yuwen.dp.create.singleton.factory.simple.v1;
+
+import edu.yuwen.dp.create.singleton.factory.scene.IRuleConfigParser;
+import edu.yuwen.dp.create.singleton.factory.scene.InvalidRuleConfigException;
+import edu.yuwen.dp.create.singleton.factory.scene.RuleConfig;
 
 /**
  * 1.简单工厂模式
