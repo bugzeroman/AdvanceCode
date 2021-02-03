@@ -10,9 +10,11 @@ import edu.yuwen.dp.create.singleton.factory.scene.XmlRuleConfigParser;
 import edu.yuwen.dp.create.singleton.factory.scene.YamlRuleConfigParser;
 
 /**
- * 2.工厂模式 
+ * 2.工厂模式  
  * 
  * 1.简单工厂模式 第二种写法，针对线程安全可复用的实例，可以预先缓存，类似单例模式和简单工厂模式的结合
+ * 
+ * 推荐第二种写法
  * 
  * Explain:将createParser()函数剥离到一个独立的类中，让这个类只负责对象的创建
  */

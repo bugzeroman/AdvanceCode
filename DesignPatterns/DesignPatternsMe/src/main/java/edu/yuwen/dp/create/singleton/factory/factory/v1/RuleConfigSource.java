@@ -1,5 +1,10 @@
-package edu.yuwen.dp.create.singleton.factory.factory;
+package edu.yuwen.dp.create.singleton.factory.factory.v1;
 
+import edu.yuwen.dp.create.singleton.factory.factory.IRuleConfigParserFactory;
+import edu.yuwen.dp.create.singleton.factory.factory.JsonRuleConfigParserFactory;
+import edu.yuwen.dp.create.singleton.factory.factory.PropertiesRuleConfigParserFactory;
+import edu.yuwen.dp.create.singleton.factory.factory.XmlRuleConfigParserFactory;
+import edu.yuwen.dp.create.singleton.factory.factory.YamlRuleConfigParserFactory;
 import edu.yuwen.dp.create.singleton.factory.scene.IRuleConfigParser;
 import edu.yuwen.dp.create.singleton.factory.scene.InvalidRuleConfigException;
 import edu.yuwen.dp.create.singleton.factory.scene.RuleConfig;
@@ -7,7 +12,7 @@ import edu.yuwen.dp.create.singleton.factory.scene.RuleConfig;
 /**
  * 2.工厂模式 
  * 
- * 1.工厂方法模式
+ * 1.工厂方法模式 第一种，典型代码实现
  * 
  * Demo:根据配置文件的后缀（json、xml、yaml、properties），
  * 选择不同的解析器（JsonRuleConfigParser、XmlRuleConfigParser……），
