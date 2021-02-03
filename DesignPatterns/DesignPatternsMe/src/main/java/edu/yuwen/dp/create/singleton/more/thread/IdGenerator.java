@@ -4,7 +4,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * 1.单例模式的变种，多例模式
+ * 1.单例模式的变种，多例模式，实例数量和线程数相等
  * 
  * A.单例模式在进程内唯一，线程内不唯一，多个线程共享同一个单例
  * B.多例模式在进程内唯一，线程内也唯一，可以看做ThreadLocal
