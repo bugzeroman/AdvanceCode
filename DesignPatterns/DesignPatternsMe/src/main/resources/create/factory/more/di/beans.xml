@@ -1,0 +1,10 @@
+<beans>
+   <bean id="rateLimiter" class="edu.yuwen.dp.create.factory.more.di.scene.RateLimiter">
+      <constructor-arg ref="redisCounter" />
+   </bean>
+ 
+   <bean id="redisCounter" class="edu.yuwen.dp.create.factory.more.di.scene.RedisCounter" scope="singleton" lazy-init="true">
+     <constructor-arg type="String" value="127.0.0.1" />
+     <constructor-arg type="int" value="1234" />
+   </bean>
+</beans>
