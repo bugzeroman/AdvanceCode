@@ -14,6 +14,7 @@ import org.w3c.dom.NodeList;
 
 import edu.yuwen.dp.create.factory.more.di.BeanConfigParser;
 import edu.yuwen.dp.create.factory.more.di.entity.BeanDefinition;
+import edu.yuwen.dp.create.factory.more.di.entity.BeanDefinition.ConstructorArg;
 
 public class XmlBeanConfigParser implements BeanConfigParser {
 
@@ -26,9 +27,7 @@ public class XmlBeanConfigParser implements BeanConfigParser {
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             Document doc = documentBuilder.parse(inputStream);
 
-            // TODO: read it later, 关于 xml 为什么需要 normalize 一下
-            // optional, but recommended
-            // read this -
+            // 关于 xml 为什么需要 normalize 一下
             // http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
             doc.getDocumentElement().normalize();
 
@@ -66,25 +65,25 @@ public class XmlBeanConfigParser implements BeanConfigParser {
                 continue;
             Element element = (Element) node;
 
-            BeanDefinition.ConstructorArg constructorArg = null;
+            ConstructorArg constructorArg = null;
             String type = element.getAttribute("type");
             if (!type.isEmpty()) {
-                constructorArg = new BeanDefinition.ConstructorArg();
-                Object value = element.getAttribute("value");
-
                 // 需要对不同的参数类型做处理，这里仅支持示例中的String和int
                 // 默认参数类型为String
                 Class typeClass = String.class;
+                Object value = element.getAttribute("value");
                 if (type.equals("int")) {
                     typeClass = int.class;
                     value = new Integer(value.toString());
                 }
+
+                constructorArg = new ConstructorArg();
                 constructorArg.setType(typeClass);
                 constructorArg.setArg(value);
             }
 
             if (!element.getAttribute("ref").isEmpty()) {
-                constructorArg = new BeanDefinition.ConstructorArg();
+                constructorArg = new ConstructorArg();
                 constructorArg.setRef(true);
                 constructorArg.setArg(element.getAttribute("ref"));
             }

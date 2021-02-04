@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 import edu.yuwen.dp.create.factory.more.di.entity.BeanDefinition;
+import edu.yuwen.dp.create.factory.more.di.entity.BeanDefinition.ConstructorArg;
 import edu.yuwen.dp.create.factory.more.di.exception.BeanCreationFailureException;
 import edu.yuwen.dp.create.factory.more.di.exception.NoSuchBeanDefinitionException;
 
@@ -41,18 +42,20 @@ public class BeansFactory {
         Object bean = null;
         try {
             Class beanClass = Class.forName(beanDefinition.getClassName());
-            List<BeanDefinition.ConstructorArg> args = beanDefinition.getConstructorArgs();
+            List<ConstructorArg> args = beanDefinition.getConstructorArgs();
             if (args.isEmpty()) {
                 bean = beanClass.newInstance();
             } else {
                 Class[] argClasses = new Class[args.size()];
                 Object[] argObjects = new Object[args.size()];
                 for (int i = 0; i < args.size(); ++i) {
-                    BeanDefinition.ConstructorArg arg = args.get(i);
+                    ConstructorArg arg = args.get(i);
                     if (!arg.isRef()) {
+                        // 非引用参数的值可以直接使用
                         argClasses[i] = arg.getType();
                         argObjects[i] = arg.getArg();
                     } else {
+                        // 找到引用参数类型的Bean定义
                         BeanDefinition refBeanDefinition = beanDefinitions.get(arg.getArg());
                         if (refBeanDefinition == null) {
                             throw new NoSuchBeanDefinitionException("Bean is not defined: " + arg.getArg());
