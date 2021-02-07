@@ -1,4 +1,4 @@
-package edu.yuwen.dp.structure.proxy.statics.interfaces;
+package edu.yuwen.dp.structure.proxy.scene;
 
 public class UserController implements IUserController {
     // ...省略其他属性和方法...

@@ -1,5 +1,7 @@
 package edu.yuwen.dp.structure.proxy.statics.inherit;
 
+import edu.yuwen.dp.structure.proxy.scene.UserVo;
+
 /**
  * 1.代理模式（结构性）
  * 

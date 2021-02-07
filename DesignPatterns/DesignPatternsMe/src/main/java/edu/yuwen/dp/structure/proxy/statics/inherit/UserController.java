@@ -1,5 +1,7 @@
 package edu.yuwen.dp.structure.proxy.statics.inherit;
 
+import edu.yuwen.dp.structure.proxy.scene.UserVo;
+
 /**
  * 该业务类没有实现接口
  *
