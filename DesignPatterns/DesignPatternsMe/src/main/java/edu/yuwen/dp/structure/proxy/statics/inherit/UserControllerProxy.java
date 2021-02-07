@@ -1,25 +1,23 @@
-package edu.yuwen.dp.structure.proxy.statics.interfaces;
+package edu.yuwen.dp.structure.proxy.statics.inherit;
 
 /**
  * 1.代理模式（结构性）
  * 
- * 1.静态代理的实现方式一，通过接口代理
+ * 2.静态代理的实现方式二，通过继承代理
  *
  * Demo:性能统计，给业务接口增加调用耗时统计的功能
  */
-public class UserControllerProxy implements IUserController {
-    private UserController userController;
+public class UserControllerProxy extends UserController {
 
-    public UserControllerProxy(UserController userController) {
-        this.userController = userController;
+    public UserControllerProxy() {
     }
 
     @Override
     public UserVo login(String telephone, String password) {
         long startTimestamp = System.currentTimeMillis();
 
-        // 委托
-        UserVo userVo = userController.login(telephone, password);
+        // 委托给父类，实现具体的业务
+        UserVo userVo = super.login(telephone, password);
 
         long endTimeStamp = System.currentTimeMillis();
         long responseTime = endTimeStamp - startTimestamp;
@@ -31,12 +29,13 @@ public class UserControllerProxy implements IUserController {
     public UserVo register(String telephone, String password) {
         long startTimestamp = System.currentTimeMillis();
 
-        // 委托
-        UserVo userVo = userController.register(telephone, password);
+        // 委托给父类，实现具体的业务
+        UserVo userVo = super.register(telephone, password);
 
         long endTimeStamp = System.currentTimeMillis();
         long responseTime = endTimeStamp - startTimestamp;
         System.out.println("call time cost is " + responseTime);
+
         return userVo;
     }
 }
