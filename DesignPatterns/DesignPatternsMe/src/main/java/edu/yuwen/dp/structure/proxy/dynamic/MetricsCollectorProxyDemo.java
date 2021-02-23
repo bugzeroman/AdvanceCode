@@ -4,7 +4,7 @@ import edu.yuwen.dp.structure.proxy.scene.IUserController;
 import edu.yuwen.dp.structure.proxy.scene.UserController;
 
 /**
- * 1.代理模式（结构性）
+ * 1.代理模式（结构型）
  * 
  * 1.动态代理
  *

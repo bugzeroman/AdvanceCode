@@ -3,7 +3,7 @@ package edu.yuwen.dp.structure.bridge;
 import java.util.Collections;
 
 /**
- * 2.桥接模式（结构性）
+ * 2.桥接模式（结构型）
  * 
  * Demo: 演示使用方法，把不同的规则和通知组装起来，实现告警，
  * 可以在配置文件中指定不同的告警级别对应的通知渠道，

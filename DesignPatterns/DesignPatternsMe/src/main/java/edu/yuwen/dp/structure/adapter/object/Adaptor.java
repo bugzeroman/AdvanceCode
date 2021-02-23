@@ -4,7 +4,7 @@ import edu.yuwen.dp.structure.adapter.scene.Adaptee;
 import edu.yuwen.dp.structure.adapter.scene.ITarget;
 
 /**
- * 4.适配器模式（结构性）
+ * 4.适配器模式（结构型）
  * 
  * 2.对象适配器：基于组合
  *

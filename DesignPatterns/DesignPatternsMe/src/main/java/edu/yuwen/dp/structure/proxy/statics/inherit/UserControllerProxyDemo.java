@@ -1,7 +1,7 @@
 package edu.yuwen.dp.structure.proxy.statics.inherit;
 
 /**
- * 1.代理模式（结构性）
+ * 1.代理模式（结构型）
  * 
  * 2.静态代理的实现方式二，通过继承代理
  *

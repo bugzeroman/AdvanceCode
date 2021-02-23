@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * 1.代理模式（结构性）
+ * 1.代理模式（结构型）
  * 
  * 1.动态代理 动态生成需要代理的类，而不需要针对每个业务接口或者实现类单独写一个代理类
  *

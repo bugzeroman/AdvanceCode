@@ -1,7 +1,7 @@
 package edu.yuwen.dp.structure.adapter.more.capsulation;
 
 /**
- * 4.适配器模式（结构性） 应用场景举例
+ * 4.适配器模式（结构型） 应用场景举例
  * 
  * 1.类适配器: 基于继承
  *

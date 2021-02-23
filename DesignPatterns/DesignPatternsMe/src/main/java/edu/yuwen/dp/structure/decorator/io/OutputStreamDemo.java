@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 
 /**
- * 1.装饰器模式（结构性）
+ * 1.装饰器模式（结构型）
  * 
  * 1.仅介绍JDK的文件IO的例子，没有实现的例子
  *

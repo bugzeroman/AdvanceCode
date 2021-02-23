@@ -1,7 +1,7 @@
 package edu.yuwen.dp.structure.composite.file;
 
 /**
- * 6.组合模式（结构性）
+ * 6.组合模式（结构型）
  * 
  *
  * Demo:可以组织为树形结构的数据结构，文件系统，包括文件和目录结构

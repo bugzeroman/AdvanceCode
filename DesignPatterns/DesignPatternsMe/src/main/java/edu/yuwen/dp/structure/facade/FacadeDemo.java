@@ -1,7 +1,7 @@
 package edu.yuwen.dp.structure.facade;
 
 /**
- * 5.门面模式（结构性）
+ * 5.门面模式（结构型）
  * 
  * 
  *

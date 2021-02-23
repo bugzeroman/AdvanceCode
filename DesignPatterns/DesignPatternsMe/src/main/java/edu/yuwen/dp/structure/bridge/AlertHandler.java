@@ -1,7 +1,7 @@
 package edu.yuwen.dp.structure.bridge;
 
 /**
- * 2.桥接模式（结构性）
+ * 2.桥接模式（结构型）
  * 
  * Demo: API 接口监控告警的例子：根据不同的告警规则，触发不同类型的告警。
  */

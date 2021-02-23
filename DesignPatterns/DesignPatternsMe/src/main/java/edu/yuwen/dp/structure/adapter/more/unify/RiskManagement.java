@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 4.适配器模式（结构性） 应用场景举例
+ * 4.适配器模式（结构型） 应用场景举例
  * 
  * 2.对象适配器：基于组合
  *
