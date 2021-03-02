@@ -1,7 +1,7 @@
 package edu.yuwen.dp.behavior.strategy.discount;
 
 /**
- * 2.策略模式（行为型）
+ * 3.策略模式（行为型）
  * 
  * 1.使用折扣策略工程的查表法去掉代码中的if-else判断
  *
