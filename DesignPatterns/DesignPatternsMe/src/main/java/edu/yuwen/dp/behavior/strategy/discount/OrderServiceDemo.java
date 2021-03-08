@@ -7,7 +7,7 @@ package edu.yuwen.dp.behavior.strategy.discount;
  *
  * Demo:商品对于不同的订单类型有不同的优惠策略
  */
-public class OrderService {
+public class OrderServiceDemo {
     // 策略的使用
     public double discount(Order order) {
         OrderType type = order.getType();
