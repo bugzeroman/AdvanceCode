@@ -21,6 +21,7 @@ public class InputText {
 
     @Override
     public String toString() {
-        return text.toString();
+        return "InputText [text=" + text + "]";
     }
+
 }

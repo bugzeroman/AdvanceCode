@@ -15,7 +15,7 @@ public class InputTextDemo {
         while (scanner.hasNext()) {
             String input = scanner.next();
             if (input.equals(":list")) {
-                System.out.println(inputText.toString());
+                System.out.println(inputText.getText());
             } else if (input.equals(":undo")) {
                 Snapshot snapshot = snapshotsHolder.popSnapshot();
                 inputText.restoreSnapshot(snapshot);
